@@ -51,6 +51,6 @@ function listDirectory(directory: string, deep = 1) {
   writiFileList(fsList);
 }
 
-// deno run list-files.ts /myDir
-// deno run list-files.ts /myDir 3
+// deno run --allow-read --allow-write list-files.ts /myDir
+// deno run list-files.ts --allow-read --allow-write /myDir 3
 listDirectory(Deno.args[0], +Deno.args[1]);
